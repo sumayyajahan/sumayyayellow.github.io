@@ -1,0 +1,30 @@
+body{
+    background-color: rgb(118, 160, 196);
+    margin: 10px 10px 10px 10px;
+}
+h1{
+    text-align: center;
+    color: #fff;
+}
+p:first-of-type{
+    text-align: center;
+    color: rgb(185, 221, 227);
+}
+h3{
+    color: #fff;
+}
+span img{
+    margin: 20px 20px 10px 40px;
+}
+ul li{
+    color: rgb(185, 221, 227);
+}
+span{
+    color: #fff;
+}
+p.movie{
+    text-align: left;
+}
+ol li{
+    color: rgb(185, 221, 227);
+}
