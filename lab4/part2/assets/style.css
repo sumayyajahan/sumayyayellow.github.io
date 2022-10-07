@@ -1,0 +1,41 @@
+body{
+    margin: 0px;
+}
+.header{
+    background-color: #ADD8E6;
+    text-align: center;
+    height: 100px;
+    font-weight: bold;
+    
+}
+.menu{
+    background-color: #2F4F4F;
+    display: inline;
+    color: white;
+    border-right: 1px solid black;
+}
+.box1{
+    height: 500px;
+    background-color: #AAAAAA;
+}
+.box2{
+    height: 500px;
+    background-color: #BBBBBB;
+}
+.box3{
+    height: 500px;
+    background-color: #CCCCCC;
+}
+.footer{
+    text-align: center;
+    height: 100px;
+    background-color: #2F4F4F;
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+/* .menu >.menu1,.menu2,.menu3{
+   border-right: 1px solid black;
+
+} */
