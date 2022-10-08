@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<!-- saved from url=(0152)https://sakai.cs.miu.edu/access/content/attachment/80d4edbf-f908-4de8-8030-260bde386942/Assignments/c6abb19d-4bc0-4928-abb8-e57e96b12fd6/JsIntroLab.html -->
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <title>Title</title>
+    <script>
+      /* max returns the maximum of 2 arguments */
+      function max(a, b) {
+        if (a > b) {
+          return a;
+        } else {
+          return b;
+        }
+      }
+      console.log(
+        "Expected output of max(20,10) is 20  " +
+          myFunctionTest(20, max(20, 10))
+      );
+
+      /* max3 takes 3 numbers as arguments and returns the largest */
+      function maxOfThree(a, b, c) {
+        return max(max(a, b), c);
+      }
+
+      console.log(
+        "Expected output of maxOfThree(5,4,44) is 44  " +
+          myFunctionTest(44, maxOfThree(5, 4, 44))
+      );
+      console.log(
+        "Expected output of maxOfThree(55,4,44) is 55  " +
+          myFunctionTest(55, maxOfThree(55, 4, 44))
+      );
+
+      console.log(
+        "Expected output of maxOfThree(55,4,44) is 55  " +
+          myFunctionTest(4, maxOfThree(55, 4, 44))
+      );
+
+      function isVowel(x) {
+        const vowels = ["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"];
+        if (x.length > 0) {
+          if (vowels.includes(x[0])) {
+            return true;
+          }
+        }
+        return false;
+      }
+      console.log(
+        "Expected output of isVowel('a') is true  " +
+          myFunctionTest(true, isVowel("A"))
+      );
+      console.log(
+        "Expected output of isVowel('A') is true  " +
+          myFunctionTest(true, isVowel("A"))
+      );
+
+      function sum(a) {
+        let sum = 0;
+
+        for (let index = 0; index < a.length; index++) {
+          sum += a[index];
+        }
+
+        return sum;
+      }
+
+      console.log(
+        "Expected output of sum([1,2,3,4]) is 10 " +
+          myFunctionTest(10, sum([1, 2, 3, 4]))
+      );
+
+      function multiply(a) {
+        let mul = 1;
+
+        for (let index = 0; index < a.length; index++) {
+          mul = mul * a[index];
+        }
+
+        return mul;
+      }
+      console.log(
+        "Expected output of multiply([1,2,3,4]) is 24 " +
+          myFunctionTest(24, multiply([1, 2, 3, 4]))
+      );
+
+      function reverse(str){
+        
+        let result = "";
+        for( i=str.length-1; i>=0; i--){
+           result += str[i];
+        }
+        return result;
+      }
+
+      console.log(
+        "Expected output of reverse('sumayya')" +
+          myFunctionTest("ayyamus", reverse("sumayya"))
+      );
+
+      function findLongestWord(a){
+        
+        let maxLength = 0;
+        let maxWord ="";
+        for( i=0; i<a.length; i++){
+            
+          if(a[i].length>maxLength){
+            maxLength = a[i].length
+            maxWord = a[i];
+          }
+            
+        }
+        return maxWord;
+      }
+
+      console.log(
+        "Expected output of ['bat','dogs','cricket'] is cricket" +
+          myFunctionTest("cricket", findLongestWord(["bat","dogs","cricket"]))
+      );
+
+      function filterLongWords(a,x){
+        
+        let result = [];
+        
+        for( i=0; i<a.length; i++){
+            
+          if(a[i].length>x){
+            result.push(a[i]);
+          }
+            
+        }
+        return result;
+      }
+
+      console.log(
+        "Expected output of ['bat','dogs','cricket'] is ['dogs','cricket']" +
+          myFunctionTest(JSON.stringify(["dogs","cricket"]), JSON.stringify(filterLongWords(["bat","dogs","cricket"],3)))
+      );
+
+      
+      function mapMultiply() {
+        const a = [1, 3, 5, 3, 3];
+        const b = a.map(function (elem, i, array) {
+          return elem * 10;
+        });
+
+        return b;
+      }
+
+      console.log( 
+        "Expected output of [1, 3, 5, 3, 3] is [10, 30, 50, 30, 30]" +
+          myFunctionTest(
+            JSON.stringify([10, 30, 50, 30, 30]),
+            JSON.stringify(mapMultiply())
+          )
+      );
+
+      function findFilter() {
+        const a = [1, 3, 5, 3, 3];
+
+        const c = a.filter(function (elem, i, array) {
+          return elem == 3;
+        });
+
+        return c;
+      }
+
+      console.log(
+        "Expected output of [1, 3, 5, 3, 3] is [3, 3, 3]" +
+          myFunctionTest(
+            JSON.stringify([3, 3, 3]),
+            JSON.stringify(findFilter())
+          )
+      );
+
+      function reduceEle() {
+
+        const a = [1, 3, 5, 3, 3];
+        const d = a.reduce(function (prevValue, elem, i, array) {
+          return prevValue * elem;
+        });
+
+        return d;
+      }
+
+      console.log(
+        "Expected output of [1, 3, 5, 3, 3] is 135 " +
+          myFunctionTest(135,reduceEle()
+          )
+      );
+
+      /* runs test to see if expected argument is === to value returned by function2test argument */
+      function myFunctionTest(expected, found) {
+        if (expected === found) {
+          return "TEST SUCCEEDED";
+        } else {
+          return "TEST FAILED.  Expected " + expected + " found " + found;
+        }
+      }
+    </script>
+  </head>
+  <body>
+    Look in the Chrome developer console to see the output. CTRL_SHIFT_J <br />
+    Or on Firefox with CTRL_SHIFT_K
+  </body>
+</html>
