@@ -2,11 +2,11 @@
 function max(a, b) {
     let c = [a, b];
 
-    const d = a.filter(function (prev, elem, i, array) {
+    const d = c.reduce(function (prev, elem, i, array) {
       return prev>elem? prev: elem;
     }, 0);
 
-    return c;
+    return d;
   }
 
   /* max3 takes 3 numbers as arguments and returns the largest */
@@ -32,10 +32,12 @@ function max(a, b) {
   
   function sum(a) {
     let sum = 0;
-    let a = [1,2,3,4];
+    //let a = [1,2,3,4];
     const result = a.reduce((accumulator, currentValue) => {
       return accumulator + currentValue;
     },0);
+
+    return result;
   }
 
 
@@ -101,6 +103,15 @@ function filterLongWords(wordsArry, maxLen) {
     });
 
     return d;
+  }
+
+  function shortest(x, y, z){
+     
+    let item = [x, y, z];
+
+    return item.reduce(function(prev, elem, i, array){
+        return (prev > elem) ? elem : prev;
+    });
   }
 
   

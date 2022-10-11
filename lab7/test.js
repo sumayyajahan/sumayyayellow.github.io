@@ -6,7 +6,7 @@ describe("max", function () {
 
 describe("maxThree", function () {
   it("takes 3 number, and returns whicherver number is maximum", function () {
-    assert.equal(7, maxThree(5, 7, 2));
+    assert.equal(7, maxOfThree(5, 7, 2));
   });
 });
 
