@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <title>Part 2 - 1, 2, 3</title>
+  </head>
+  <body>
+    <div class="container mt-5">
+      <form>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" class="form-control" placeholder="Enter email" />
+          <small class="form-text text-muted"
+            >We'll never share your email with anyone else.</small
+          >
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" class="form-control" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{10,}"
+          title="Password field is at least 10 characters in length and contain at least one number and one uppercase and lowercase letter">
+        </div>
+        <div class="form-group">
+            <label for="url">URL</label>
+            <input type="url" class="form-control" name="website" pattern="https?://.+" title="Please
+            enter a URL">
+        </div>
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" />
+          <label class="form-check-label">Check me out</label>
+        </div>
+        
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>
