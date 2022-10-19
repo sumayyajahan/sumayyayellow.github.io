@@ -1,0 +1,13 @@
+input[type=number]{
+border: 1px solid #ccc;
+color: rgb(88, 92, 88);
+width: 10%;
+}
+
+.container{
+    margin-top: 200px;
+    margin-left: 50px;
+}
+.submit{
+    margin-top: 10px;
+}
